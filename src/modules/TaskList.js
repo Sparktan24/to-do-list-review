@@ -52,7 +52,6 @@ export default class TaskList {
         <div class="delete item-icon hidden" id='delete-${task.index}'></div>
         `;
       data.push(li);
-      //  console.log(data);
     });
     return data;
   }

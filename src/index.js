@@ -1,7 +1,7 @@
 import './style.css';
 import Task from './modules/Task.js';
 import TaskList from './modules/TaskList.js';
-import TaskDone from './modules/TaskDone';
+import TaskDone from './modules/TaskDone.js';
 
 const tasksList = new TaskList();
 const generatedElements = document.querySelector('.tasks-container');
@@ -52,7 +52,6 @@ generatedElements.appendChild(renderBtn());
 
 const inputSubmitTaskBtn = generatedElements.querySelector('#submit-new-item');
 const inputSubmitTaskText = generatedElements.querySelector('#add-new-item');
-//  const listContent = generatedElements.querySelector('#list-content');
 
 function Listener() {
   const editBtns = document.querySelectorAll('.edit');
@@ -87,7 +86,7 @@ function Listener() {
 
   const listElements = generatedElements.querySelectorAll('li');
   listElements.forEach((element) => {
-    element.addEventListener('dblclick', (e) => { //  dblclick
+    element.addEventListener('dblclick', (e) => {
       const { id } = e.target;
       const index = id.substring(id.indexOf('-') + 1, id.length);
       const rowTask = document.querySelector(`#task-${index}`);
@@ -172,7 +171,6 @@ inputSubmitTaskBtn.addEventListener('click', () => {
   tasksList.newIndex();
   refresh();
   Listener();
-  //  generatedElements.replaceChild(renderItemRows(), listContent);
 });
 
 const clearAllBtn = document.querySelector('#clear-btn');
