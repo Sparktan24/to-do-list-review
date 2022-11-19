@@ -19,8 +19,8 @@ const renderAddItem = () => {
   const addElementInput = document.createElement('div');
   addElementInput.id = 'input-row';
   addElementInput.innerHTML = `
-  <input type="text" id='add-new-item' class="input-new-item" placeholder="Add to your list...">
-  <input type="submit" id="submit-new-item" value title="click this or press enter to submit">
+  <input type='text' id='add-new-item' class='input-new-item' placeholder='Add to your list...'>
+  <input type='submit' id='submit-new-item' value title='click this or press enter to submit'>
   `;
   return addElementInput;
 };

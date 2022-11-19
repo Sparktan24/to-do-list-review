@@ -43,13 +43,13 @@ export default class TaskList {
       li.classList.add('input');
       li.id = `task-${task.index}`;
       li.innerHTML = `
-        <div class="task-content">
-          <input id="cb-${task.index}" type="checkbox" class="checkbox" ${task.completed ? 'checked' : ''}>
-          <label id="lbl-${task.index}" for="cb-${task.index}" class="${task.completed ? 'completed' : ''}">${task.description}</label>
-          <input type="text" class="input-edit-text hidden" id='editItem-${task.index}' value='${task.description}'>
+        <div class='task-content'>
+          <input id='cb-${task.index}' type='checkbox' class='checkbox' ${task.completed ? 'checked' : ''}>
+          <label id='lbl-${task.index}' for='cb-${task.index}' class='${task.completed ? 'completed' : ''}'>${task.description}</label>
+          <input type='text' class='input-edit-text hidden' id='editItem-${task.index}' value='${task.description}'>
         </div>
-        <div class="item-icon edit" id='edit-${task.index}'></div>
-        <div class="delete item-icon hidden" id='delete-${task.index}'></div>
+        <div class='item-icon edit' id='edit-${task.index}'></div>
+        <div class='delete item-icon hidden' id='delete-${task.index}'></div>
         `;
       data.push(li);
     });
